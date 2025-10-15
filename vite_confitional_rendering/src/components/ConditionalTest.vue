@@ -19,6 +19,22 @@
     <p>输入第二个数字: <input type="number" v-model.number="secondNumber"></p>
     <p>结果: {{ firstNumber + secondNumber }}</p>
     <hr/>
+    <div v-if=" type ==='A' ">条件A</div>
+    <div v-else-if=" type ==='B' ">条件B</div>
+    <div v-else>条件C</div>
+    <button v-on:click="type='A'">切换Type为A</button>
+    <button v-on:click="type='B'">切换Type为B</button>
+    <button v-on:click="type='C'">切换Type为C</button>
+    <button v-on:click="type='other'">切换Type为other</button>
+    <hr/>
+    <hr/>
+    <hr/>
+
+    <hr/>
+    <hr/>
+    <hr/>
+    <hr/>
+    <hr/>
 </template>
 
 <script setup>
@@ -34,6 +50,8 @@
     const your_username = ref("")
     const firstNumber = ref(0)
     const secondNumber = ref(0) 
+
+    const type = ref("A")
 </script>
 
 export default {
